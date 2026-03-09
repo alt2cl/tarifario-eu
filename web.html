@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes Web — Universo Fútbol | Formatos Tradicionales, Rich Media y DSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="web.css">
+</head>
+<body class="page-web">
+
+  <div class="app-wrapper">
+    <header class="tarifario-header web-header">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 py-3 position-relative">
+          <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+            <img src="./src/img/LP_EUD Home_07.png" alt="Grupo Emisoras Unidas Digital" class="tarifario-header__logo web-header__logo logo-1" width="220" height="70" />
+            <img src="./src/img/LP_EUD Home_03.png" alt="Grupo Emisoras Unidas Digital" class="tarifario-header__logo web-header__logo logo-2" width="220" height="70" />
+          </a>
+          <button type="button" class="tarifario-nav__toggle d-flex align-items-center justify-content-center" aria-label="Abrir menú" aria-expanded="false" aria-controls="tarifario-nav" id="tarifario-nav-toggle">
+            <i class="bi bi-list tarifario-nav__icon" aria-hidden="true"></i>
+          </button>
+          <nav class="tarifario-nav" id="tarifario-nav" aria-label="Navegación principal">
+            <ul class="tarifario-nav__list list-unstyled mb-0">
+              <li><a href="index.html" class="tarifario-nav__link">Ecosistema</a></li>
+              <li><a href="index.html" class="tarifario-nav__link">RRSS</a></li>
+              <li><a href="web.html" class="tarifario-nav__link tarifario-nav__link--active">Web</a></li>
+              <li><a href="streaming.html" class="tarifario-nav__link">Streaming</a></li>
+              <li><a href="index.html" class="tarifario-nav__link">Podcast</a></li>
+              <li><a href="index.html" class="tarifario-nav__link">Push</a></li>
+              <li><a href="index.html" class="tarifario-nav__link">Influencers</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========== HERO (desktop: imagen + overlay "Web" | bloque azul título + 2 columnas) ========== -->
+      <section class="web-hero web-section--alt" aria-label="Introducción">
+        <div class="web-hero__visual">
+          <img src="./src/img/web.png" alt="" class="web-hero__img" />
+          <!-- <div class="web-hero__overlay"></div> -->
+          <span class="overlay-label web-hero__label">Web</span>
+        </div>
+        <div class="web-hero__content-block">
+          <div class="container position-relative">
+            <div class="section-badge web-hero__badge-desktop d-none d-lg-flex" aria-hidden="true">
+              <span>Web</span>
+              <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="100" height="100" />
+            </div>
+            <h1 class="section-title-hero web-hero__title d-none d-lg-block" data-aos="fade-up">
+              Formatos Tradicionales, Rich Media, <span class="web-hero__title-line-wrap"><span class="section-title-hero__line" aria-hidden="true"></span>y DSP</span>
+            </h1>
+            <p class="web-hero__title-mobile d-lg-none">PLANES WEB UNIVERSO FÚTBOL</p>
+            <p class="web-hero__desc d-lg-none" data-aos="fade-up" data-aos-delay="100">
+              Te ofrecemos una estrategia de contenido completa para llegar a tu audiencia ideal, a través de nuestra plataforma web.
+            </p>
+            <a href="#cotiza" class="web-hero__cta btn btn-primary d-lg-none" data-aos="fade-up" data-aos-delay="200">¡Cotiza Aquí!</a>
+            <div class="web-hero__two-cols two-col-text d-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
+              <div class="post-block__line"></div>
+              <div class="row g-4 pb-3">
+                <div class="col-md-6">
+                  <p>Grupo Emisoras Unidas con su <strong>NUEVA plataforma web</strong>, una de las más robustas en Guatemala. El rediseño incluye mejorías para la experiencia de usuario (UX) y mejores prácticas SEO. También se resaltará el potencial audiovisual, dándole prioridad a los contenidos de video como podcasts, streaming, EUTV, etc.</p>
+                </div>
+                <div class="col-md-6">
+                  <p>El propósito es que sus campañas puedan <strong>alcanzar sus objetivos</strong> en una plataforma amigable, innovadora y con todo el respaldo del contenido e información de Grupo Emisoras Unidas.</p>
+                </div>
+              </div>
+              <div class="post-block__line"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+      <!-- ========== BLOQUE 2 — WEB (Sitio Web + Especificaciones para Banner) ========== -->
+      <section class="web-section post-block" id="seccion-web" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">Web</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="post-block__grid">
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-right">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Sitio Web</span>
+                <span class="post-block__header post-block__header--right">Costo CPM</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Formato tradicional</span><span>$3.00</span></li>
+                <li><span>Formato rich media</span><span>$5.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+            <div class="post-block__col post-block__col--specs" data-aos="fade-left">
+              <div class="post-block__line"></div>
+              <h3 class="post-block__subtitle pb-2">Especificaciones para Banner</h3>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--bullets">
+                <li>Consultar tabla de medidas según formato deseado</li>
+                <li>Imagen en JPG o PNG</li>
+                <li>Editables</li>
+                <li>Link de redirección</li>
+              </ul>
+              <div class="post-block__importante">
+                <div class="post-block__line"></div>
+                <p class="post-block__importante-title">Importante:</p>
+                <ol class="post-block__list post-block__list--numbered">
+                  <li>Precios sin impuestos.</li>
+                  <li>Cualquier iniciativa adicional se cotiza por separado.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ========== DMP (Sitios Web + Segmentación + Especificaciones para Banner) ========== -->
+      <section class="web-section web-section--alt post-block" id="seccion-dmp" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">DMP</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="post-block__grid">
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-right">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Sitios Web</span>
+                <span class="post-block__header post-block__header--right">Costo sin Impuesto</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Emisoras Unidas</span><span>$8.00</span></li>
+                <li><span>Banners Tradicionales</span><span>$10.00</span></li>
+                <li><span>Banners Interstitial</span><span>$10.00</span></li>
+                <li><span>Banner Rich Media</span><span>$10.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+            <div class="post-block__col post-block__col--specs" data-aos="fade-left">
+              <div class="post-block__line"></div>
+              <h3 class="post-block__subtitle pb-2">Segmentación DMP</h3>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--bullets">
+                <li>Educación</li>
+                <li>Negocios</li>
+                <li>Consumos (bebidas, restaurantes, finanzas, compras, viajes)</li>
+                <li>Deportes</li>
+                <li>Segmentación por país (Guatemala, Estados Unidos, Centroamérica)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="post-block__line mt-4"></div>
+          <h3 class="post-block__subtitle pt-2 pb-2">Especificaciones para Banner</h3>
+          <div class="post-block__line"></div>
+          <div class="row g-4 mt-2 mb-3">
+            <div class="col-md-4">
+              <p class="web-subtitle mb-2">Banner tradicional</p>
+              <p class="post-block__spec-text mb-0">728x90, 300x250, 300x400, 300x60 pixeles</p>
+            </div>
+            <div class="col-md-4">
+              <p class="web-subtitle mb-2">Banner Interstitial</p>
+              <p class="post-block__spec-text mb-0">970x600, 970x100, 300x480, 320x100 pixeles</p>
+            </div>
+            <div class="col-md-4">
+              <p class="web-subtitle mb-2">Banner rich media</p>
+              <p class="post-block__spec-text mb-0">Spincube, box o footer.</p>
+            </div>
+          </div>
+          <p class="post-block__nota mb-0">NOTA: El cliente puede solicitar una segmentación específica.</p>
+        </div>
+      </section>
+
+      <!-- ========== DSP Y OTROS (Display Desktop + Display Mobile + Segmentación DSP) ========== -->
+      <section class="web-section post-block" id="seccion-dsp" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">DSP y Otros</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="post-block__grid">
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-right">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Display Desktop</span>
+                <span class="post-block__header post-block__header--right">Costo CPM sin Impuestos</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Formato 728x90</span><span>$3.00</span></li>
+                <li><span>Formato 120x600</span><span>$3.00</span></li>
+                <li><span>Formato 300x600</span><span>$3.00</span></li>
+                <li><span>Formato 800x600</span><span>$3.00</span></li>
+                <li><span>Formato 970x90</span><span>$3.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-left">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Display Mobile</span>
+                <span class="post-block__header post-block__header--right">Costo CPM sin Impuestos</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Formato 728x90</span><span>$3.00</span></li>
+                <li><span>Formato 120x600</span><span>$3.00</span></li>
+                <li><span>Formato 300x600</span><span>$3.00</span></li>
+                <li><span>Formato 800x600</span><span>$3.00</span></li>
+                <li><span>Formato 970x90</span><span>$3.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+          </div>
+          <div class="post-block__line mt-4"></div>
+          <h3 class="post-block__subtitle pt-2 pb-2">Segmentación DSP</h3>
+          <div class="post-block__line"></div>
+          <div class="row g-4 mt-2">
+            <div class="col-md-4">
+              <ul class="post-block__list post-block__list--bullets mb-0">
+                <li>Geográfica</li>
+                <li>Sitios Web</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="post-block__list post-block__list--bullets mb-0">
+                <li>Aplicaciones</li>
+                <li>Frecuencia</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="post-block__list post-block__list--bullets mb-0">
+                <li>Dispositivo Desktop y Mobile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== DSP Y OTROS — Display Desktop + Formatos Rich Media + Segmentación DSP ========== -->
+      <section class="web-section web-section--alt post-block" id="seccion-dsp-rich-media" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">DSP y Otros</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="post-block__grid">
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-right">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Display Desktop</span>
+                <span class="post-block__header post-block__header--right">Costo CPM sin Impuestos</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Formato 336x280</span><span>$3.00</span></li>
+                <li><span>Formato 468x60</span><span>$3.00</span></li>
+                <li><span>Formato 160x600</span><span>$3.00</span></li>
+                <li><span>Formato 300x250</span><span>$3.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-left">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Formatos Rich Media</span>
+                <span class="post-block__header post-block__header--right">Costo CPM sin Impuestos</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Adhesión 728x90 Desktop</span><span>$5.00</span></li>
+                <li><span>Adhesión 320x50 Mobile</span><span>$5.00</span></li>
+                <li><span>Billboard 970x90 Desktop</span><span>$5.00</span></li>
+                <li><span>Billboard 320x50 Mobile</span><span>$5.00</span></li>
+                <li><span>Interstitial (Replegado 640x480)</span><span>$5.00</span></li>
+                <li class="post-block__list-item--note"><small class="opacity-75">(Expandido 100x540 Display)</small></li>
+                <li><span>Interstitial 320x480 Desktop</span><span>$5.00</span></li>
+                <li><span>Layer 640x480 Display</span><span>$5.00</span></li>
+                <li><span>Layer 300x250 Mobile</span><span>$5.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+          </div>
+          <div class="post-block__line mt-4"></div>
+          <h3 class="post-block__subtitle pt-2 pb-2">Segmentación DSP</h3>
+          <div class="post-block__line"></div>
+          <div class="row g-4 mt-2">
+            <div class="col-12 col-md-4">
+              <ul class="post-block__list post-block__list--bullets mb-0">
+                <li>Geográfica - Frecuencia</li>
+                <li>Aplicaciones - Sitios Web</li>
+                <li>Dispositivo Desktop y Mobile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== DSP Y OTROS — Video Guatemala + Video Estados Unidos + Segmentación DSP ========== -->
+      <section class="web-section post-block" id="seccion-dsp-video" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">DSP y Otros</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="post-block__grid">
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-right">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Video Guatemala</span>
+                <span class="post-block__header post-block__header--right">Costo CPM sin Impuestos</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Video Banner</span><span>$12.00</span></li>
+                <li><span>Video Instream (Pre roll, Mid Roll, Post Roll)</span><span>$12.00</span></li>
+                <li><span>Formato 160x600</span><span>$12.00</span></li>
+                <li><span>Formato 300x250</span><span>$12.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+            <div class="post-block__col post-block__col--tarifario" data-aos="fade-left">
+              <div class="post-block__line"></div>
+              <div class="post-block__header-row pb-2">
+                <span class="post-block__header">Video Estados Unidos</span>
+                <span class="post-block__header post-block__header--right">Costo CPM sin Impuestos</span>
+              </div>
+              <div class="post-block__line"></div>
+              <ul class="post-block__list post-block__list--prices">
+                <li><span>Video Banner</span><span>$16.00</span></li>
+                <li><span>Video Instream (Pre roll, Mid Roll, Post Roll)</span><span>$16.00</span></li>
+                <li><span>Formato 160x600</span><span>$16.00</span></li>
+                <li><span>Formato 300x250</span><span>$16.00</span></li>
+              </ul>
+              <div class="post-block__line"></div>
+            </div>
+          </div>
+          <div class="post-block__line mt-4"></div>
+          <h3 class="post-block__subtitle pt-2 pb-2">Segmentación DSP</h3>
+          <div class="post-block__line"></div>
+          <div class="row g-4 mt-2">
+            <div class="col-md-4">
+              <ul class="post-block__list post-block__list--bullets mb-0">
+                <li>Geográfica</li>
+                <li>Sitios Web</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="post-block__list post-block__list--bullets mb-0">
+                <li>Aplicaciones</li>
+                <li>Frecuencia</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="post-block__list post-block__list--bullets mb-0">
+                <li>Dispositivo Desktop y Mobile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ARTÍCULOS CON CONTENIDO PATROCINADO ========== -->
+      <!-- <section class="web-section" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">ARTÍCULOS CON CONTENIDO PATROCINADO</h2>
+            <div class="web-section__logo" aria-hidden="true"><span>U</span></div>
+          </div>
+          <p class="web-section__intro">
+            Hasta 300 palabras, incluye imágenes o video y publicación en nuestro sitio.
+          </p>
+          <div class="table-responsive">
+            <table class="web-table web-table--simple">
+              <thead>
+                <tr><th>Contenido</th><th>Precio</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Artículo patrocinado</td><td>Q. 300.00</td></tr>
+                <tr><td>Paquete de 3 artículos</td><td>Q. 750.00</td></tr>
+                <tr><td>Paquete de 5 artículos</td><td>Q. 1,000.00</td></tr>
+                <tr><td>Paquete de 10 artículos</td><td>Q. 1,500.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="web-note">Precios + IVA</p>
+        </div>
+      </section> -->
+
+      <!-- ========== BANNERS ========== -->
+      <!-- <section class="web-section web-section--alt" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">BANNERS</h2>
+            <div class="web-section__logo" aria-hidden="true"><span>U</span></div>
+          </div>
+          <p class="web-section__intro">
+            Presencia de marca en posiciones destacadas de nuestra web.
+          </p>
+          <div class="table-responsive">
+            <table class="web-table web-table--simple">
+              <thead>
+                <tr><th>Contenido</th><th>Precio</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Banner principal - TOP</td><td>Q. 700.00</td></tr>
+                <tr><td>Banner inferior - BOTTOM</td><td>Q. 500.00</td></tr>
+                <tr><td>Banner lateral - SIDEBAR</td><td>Q. 400.00</td></tr>
+                <tr><td>Paquete de 3 banners</td><td>Q. 1,200.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="web-note">Precios + IVA</p>
+        </div>
+      </section> -->
+
+      <!-- ========== SPOTS PUBLICITARIOS ========== -->
+      <!-- <section class="web-section" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">SPOTS PUBLICITARIOS</h2>
+            <div class="web-section__logo" aria-hidden="true"><span>U</span></div>
+          </div>
+          <p class="web-section__intro">
+            Spots de 30 segundos, máximo 20 palabras.
+          </p>
+          <div class="table-responsive">
+            <table class="web-table web-table--simple">
+              <thead>
+                <tr><th>Contenido</th><th>Precio</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Spot publicitario</td><td>Q. 200.00</td></tr>
+                <tr><td>Paquete de 5 spots</td><td>Q. 750.00</td></tr>
+                <tr><td>Paquete de 10 spots</td><td>Q. 1,000.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="web-note">Precios + IVA</p>
+        </div>
+      </section> -->
+
+      <!-- ========== EJEMPLOS DE BANNER ========== -->
+      <!-- <section class="web-section web-section--alt" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">EJEMPLOS DE BANNER</h2>
+            <div class="web-section__logo" aria-hidden="true"><span>U</span></div>
+          </div>
+          <div class="web-examples">
+            <div class="web-example-pair">
+              <div class="web-example-card">
+                <div class="web-example-card__bar web-example-card__bar--top"></div>
+                <span class="web-example-card__label">WEB</span>
+              </div>
+              <div class="web-example-card web-example-card--dark">
+                <div class="web-example-card__bar web-example-card__bar--top"></div>
+                <span class="web-example-card__label">MOBILE</span>
+              </div>
+            </div>
+            <p class="web-example-caption">Banner superior (TOP)</p>
+            <div class="web-example-pair">
+              <div class="web-example-card">
+                <div class="web-example-card__bar web-example-card__bar--side"></div>
+                <span class="web-example-card__label">WEB</span>
+              </div>
+              <div class="web-example-card web-example-card--dark">
+                <div class="web-example-card__bar web-example-card__bar--side"></div>
+                <span class="web-example-card__label">MOBILE</span>
+              </div>
+            </div>
+            <p class="web-example-caption">Banner lateral (SIDEBAR)</p>
+            <div class="web-example-pair">
+              <div class="web-example-card">
+                <div class="web-example-card__bar web-example-card__bar--bottom"></div>
+                <span class="web-example-card__label">WEB</span>
+              </div>
+              <div class="web-example-card web-example-card--dark">
+                <div class="web-example-card__bar web-example-card__bar--bottom"></div>
+                <span class="web-example-card__label">MOBILE</span>
+              </div>
+            </div>
+            <p class="web-example-caption">Banner inferior (BOTTOM)</p>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ========== EJEMPLOS DE ARTÍCULOS PATROCINADOS ========== -->
+      <!-- <section class="web-section" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">EJEMPLOS DE ARTÍCULOS CON CONTENIDO PATROCINADO</h2>
+            <div class="web-section__logo" aria-hidden="true"><span>U</span></div>
+          </div>
+          <div class="web-examples">
+            <div class="web-example-pair">
+              <div class="web-example-card web-example-card--article">
+                <div class="web-example-card__title-line"></div>
+                <div class="web-example-card__media"></div>
+                <div class="web-example-card__text"></div>
+                <span class="web-example-card__label">WEB</span>
+              </div>
+              <div class="web-example-card web-example-card--article web-example-card--dark">
+                <div class="web-example-card__title-line"></div>
+                <div class="web-example-card__media"></div>
+                <div class="web-example-card__text"></div>
+                <span class="web-example-card__label">MOBILE</span>
+              </div>
+            </div>
+            <p class="web-example-caption">Artículo estándar</p>
+            <div class="web-example-pair">
+              <div class="web-example-card web-example-card--article web-example-card--overlay">
+                <div class="web-example-card__media web-example-card__media--large"></div>
+                <div class="web-example-card__overlay-text"></div>
+                <div class="web-example-card__text"></div>
+                <span class="web-example-card__label">WEB</span>
+              </div>
+              <div class="web-example-card web-example-card--article web-example-card--overlay web-example-card--dark">
+                <div class="web-example-card__media web-example-card__media--large"></div>
+                <div class="web-example-card__overlay-text"></div>
+                <div class="web-example-card__text"></div>
+                <span class="web-example-card__label">MOBILE</span>
+              </div>
+            </div>
+            <p class="web-example-caption">Artículo con imagen destacada</p>
+          </div>
+        </div>
+      </section> -->
+
+      
+
+      <!-- <section class="web-section web-section--alt" data-aos="fade-up">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">DSP y Otros</h2>
+            <div class="web-section__logo" aria-hidden="true"><span>EMISORAS UNIDAS</span></div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <ul class="web-list web-list--pricing">
+                <li><span>Precio Mensual</span><span>Q.XX</span></li>
+                <li><span>Tarifa Fija de Pauta</span><span>Q.XX</span></li>
+                <li><span>Tarifa Fija de Servicios</span><span>Q.XX</span></li>
+                <li><span>Presupuesto de Pauta Mensual</span><span>Q.XX</span></li>
+                <li><span>Presupuesto de Pauta Anual</span><span>Q.XX</span></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="web-list web-list--pricing">
+                <li><span>Precio Mensual</span><span>Q.XX</span></li>
+                <li><span>Tarifa Fija de Pauta</span><span>Q.XX</span></li>
+                <li><span>Tarifa Fija de Servicios</span><span>Q.XX</span></li>
+                <li><span>Presupuesto de Pauta Mensual</span><span>Q.XX</span></li>
+                <li><span>Presupuesto de Pauta Anual</span><span>Q.XX</span></li>
+              </ul>
+            </div>
+            <div class="col-12">
+              <p class="web-section__intro mb-0">Incluye: Consultoría, Campaña de Retargeting, Reportes Personalizados.</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ========== MEDIDAS MOBILE (8 columnas, scroll horizontal en mobile) ========== -->
+      <section class="web-section web-section--alt" data-aos="fade-up" id="seccion-medidas-mobile">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">Medidas Mobile</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="web-measures-scroll" role="region" aria-label="Medidas de formatos mobile">
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--320x250"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">320 x 250 px</span>
+            </div>
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--320x480"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">320 x 480 px</span>
+            </div>
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--320x50"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">320 x 50 px</span>
+            </div>
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--300x50"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">300 x 50 px</span>
+            </div>
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone web-measure-card__phone--footer">
+                <div class="web-measure-card__block web-measure-card__block--300x100"></div>
+                <span class="web-measure-card__close" aria-hidden="true">×</span>
+              </div>
+              <span class="web-measure-card__label">Flotante Footer</span>
+              <span class="web-measure-card__size">300 x 100 px</span>
+            </div>
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--250x250"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">250 x 250 px</span>
+            </div>
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--468x60"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">468 x 60 px</span>
+            </div>
+            <div class="web-measure-card">
+              <div class="web-measure-card__phone web-measure-card__phone--layer">
+                <div class="web-measure-card__block web-measure-card__block--320x480-full"></div>
+              </div>
+              <span class="web-measure-card__label">Flotante Layer</span>
+              <span class="web-measure-card__size">320 x 480 px</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MEDIDAS DESKTOP (10 formatos, 5 columnas en desktop, scroll horizontal en mobile) ========== -->
+      <section class="web-section " data-aos="fade-up" id="seccion-medidas-desktop">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">Medidas Desktop</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="web-measures-scroll web-measures-scroll--desktop" role="region" aria-label="Medidas de formatos desktop">
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--728x90"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">728 x 90 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--970x90-footer"></div>
+              </div>
+              <span class="web-measure-card__label">Footer</span>
+              <span class="web-measure-card__size">970 x 90 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--970x90-billboard"></div>
+              </div>
+              <span class="web-measure-card__label">BillBoard</span>
+              <span class="web-measure-card__size">970 x 90 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--300x600"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">300 x 600 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--160x600"></div>
+              </div>
+              <span class="web-measure-card__label">Flotante</span>
+              <span class="web-measure-card__size">160 x 600 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--970x250"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">970 x 250 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--300x250"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">300 x 250 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--336x228"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">336 x 228 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--640x480"></div>
+              </div>
+              <span class="web-measure-card__label">Flotante</span>
+              <span class="web-measure-card__size">640 x 480 px</span>
+            </div>
+            <div class="web-measure-card web-measure-card--desktop">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--800x600"></div>
+              </div>
+              <span class="web-measure-card__label">Medida</span>
+              <span class="web-measure-card__size">800 x 600 px</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== GUÍA DE MEDIDAS DE MATERIALES PARA WEB TRADICIONAL ========== -->
+      <section class="web-section web-section--alt" data-aos="fade-up" id="seccion-guia-web-tradicional">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">Guía de Medidas de Materiales para Web Tradicional</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <p class="web-section__intro mb-4">Formatos estáticos / animados (HTML, JPG, GIF, PNG)</p>
+          <div class="web-measures-scroll web-measures-scroll--guide" role="region" aria-label="Guía de banners web tradicional">
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--guide-header-mobile"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Header</span>
+              <span class="web-measure-card__device">Mobile</span>
+              <span class="web-measure-card__size">320 x 100 px</span>
+              <span class="web-measure-card__formats">JPG, PNG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--guide-header-desktop"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Header</span>
+              <span class="web-measure-card__device">Desktop</span>
+              <span class="web-measure-card__size">970 x 250 px</span>
+              <span class="web-measure-card__formats">JPG, PNG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--guide-header-mid"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Header</span>
+              <span class="web-measure-card__device">Mobile</span>
+              <span class="web-measure-card__size">320 x 100 px</span>
+              <span class="web-measure-card__formats">JPG, PNG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--970x250"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Header</span>
+              <span class="web-measure-card__device">Mobile</span>
+              <span class="web-measure-card__size">970 x 250 px</span>
+              <span class="web-measure-card__formats">JPG, PNG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--guide-skybox-mobile"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Skybox</span>
+              <span class="web-measure-card__device">Mobile</span>
+              <span class="web-measure-card__size">320 x 250 px</span>
+              <span class="web-measure-card__formats">JPG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--300x250"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Skybox</span>
+              <span class="web-measure-card__device">Desktop</span>
+              <span class="web-measure-card__size">300 x 250 px</span>
+              <span class="web-measure-card__formats">JPG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--728x90"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Leaderboard</span>
+              <span class="web-measure-card__device">Mobile</span>
+              <span class="web-measure-card__size">728 x 90 px</span>
+              <span class="web-measure-card__formats">JPG o GIF</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== GUÍA DE MEDIDAS DE MATERIALES PARA WEB RICH MEDIA ========== -->
+      <section class="web-section" data-aos="fade-up" id="seccion-guia-rich-media">
+        <div class="container">
+          <div class="web-section__head">
+            <h2 class="web-section__title">Guía de Medidas de Materiales para Web Rich Media</h2>
+            <img src="./src/img/www.png" alt="Web" class="web-hero__badge-img" width="150" height="150" />
+          </div>
+          <div class="web-measures-scroll web-measures-scroll--guide web-measures-scroll--rich" role="region" aria-label="Guía de banners web rich media">
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--guide-layer-mobile"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Layer</span>
+              <span class="web-measure-card__device">Mobile</span>
+              <span class="web-measure-card__size">280 x 420 px</span>
+              <span class="web-measure-card__formats">JPG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--guide-layer-desktop"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Layer</span>
+              <span class="web-measure-card__device">Desktop</span>
+              <span class="web-measure-card__size">620 x 480 px</span>
+              <span class="web-measure-card__formats">JPG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__phone">
+                <div class="web-measure-card__block web-measure-card__block--guide-spincube-mobile"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Spincube</span>
+              <span class="web-measure-card__device">Mobile</span>
+              <span class="web-measure-card__size">300 x 250 px</span>
+              <span class="web-measure-card__formats">JPG o GIF</span>
+            </div>
+            <div class="web-measure-card web-measure-card--guide">
+              <div class="web-measure-card__browser">
+                <div class="web-measure-card__block web-measure-card__block--guide-spincube-desktop"></div>
+              </div>
+              <span class="web-measure-card__label">Banner Spincube</span>
+              <span class="web-measure-card__device">Desktop</span>
+              <span class="web-measure-card__size">300 x 250 px</span>
+              <span class="web-measure-card__formats">JPG o GIF</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="cotiza" class="py-5 text-center">
+        <a href="mailto:contacto@universodeportes.gt?subject=Cotización Planes Web" class="btn btn-primary btn-lg">Solicitar cotización</a>
+      </div>
+    </main>
+
+    <footer class="web-footer py-4 mt-5">
+      <div class="container text-center text-white-50 small">
+        <p class="mb-0">Universo Fútbol — Planes Web y Formatos Digitales</p>
+        <a href="index.html" class="text-white-50 text-decoration-none">Volver al tarifario</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({ offset: 40, duration: 400, once: true });
+
+      var toggle = document.getElementById('tarifario-nav-toggle');
+      var nav = document.getElementById('tarifario-nav');
+      if (toggle && nav) {
+        function openMenu() {
+          nav.classList.add('tarifario-nav--open');
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Cerrar menú');
+          var icon = toggle.querySelector('.tarifario-nav__icon');
+          if (icon) { icon.classList.remove('bi-list'); icon.classList.add('bi-x'); }
+        }
+        function closeMenu() {
+          nav.classList.remove('tarifario-nav--open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Abrir menú');
+          var icon = toggle.querySelector('.tarifario-nav__icon');
+          if (icon) { icon.classList.add('bi-list'); icon.classList.remove('bi-x'); }
+        }
+        toggle.addEventListener('click', function () {
+          if (nav.classList.contains('tarifario-nav--open')) closeMenu();
+          else openMenu();
+        });
+        nav.querySelectorAll('.tarifario-nav__link').forEach(function (link) {
+          link.addEventListener('click', function () { closeMenu(); });
+        });
+        document.addEventListener('click', function (e) {
+          if (nav.classList.contains('tarifario-nav--open') && !nav.contains(e.target) && !toggle.contains(e.target)) closeMenu();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

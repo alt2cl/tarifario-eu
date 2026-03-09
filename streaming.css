@@ -1,0 +1,420 @@
+/* ========== Página Streaming — Radio en Línea, EUTV, TikTok Live ========== */
+/* Reutiliza: content-block-dark, section-title-hero, overlay-label, post-block (styles.css), section-badge (styles.css). */
+
+.page-streaming {
+  background-color: var(--tarifario-bg-content);
+  color: var(--tarifario-text);
+  overflow-x: hidden;
+}
+
+.page-streaming .app-wrapper {
+  padding-bottom: 0;
+  min-height: 100vh;
+}
+
+.page-streaming main {
+  min-height: 0;
+}
+
+/* ---------- Header ---------- */
+.streaming-header .container > div {
+  flex-wrap: wrap;
+}
+.streaming-header__logo {
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+}
+
+/* ---------- Hero (imagen + overlay "Streaming" + bloque con título Radio en Línea) ---------- */
+.streaming-hero {
+  margin-bottom: 0;
+}
+
+.streaming-hero .streaming-hero__content-block [data-aos],
+.streaming-hero .streaming-hero__content-block [data-aos].aos-init {
+  opacity: 1 !important;
+}
+
+.streaming-hero__visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  overflow: hidden;
+  background-color: var(--tarifario-bg-content);
+}
+
+.streaming-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.streaming-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 19, 33, 0.2) 0%, rgba(13, 19, 33, 0.5) 100%);
+}
+
+.streaming-hero__label {
+  bottom: 18%;
+  right: 12%;
+  left: auto;
+  top: auto;
+}
+
+.streaming-hero__content-block {
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.streaming-hero__content-block .container {
+  position: relative;
+  padding-top: 0.25rem;
+}
+
+.streaming-hero__badge-desktop {
+  top: -0.5rem;
+}
+
+.streaming-hero__badge-icon {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--post-accent);
+  filter: drop-shadow(0 0 8px rgba(32, 115, 229, 0.6));
+}
+
+.streaming-hero__title {
+  margin-bottom: 1.5rem;
+}
+
+.streaming-hero__title-mobile {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.streaming-hero__desc {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.streaming-hero__cta {
+  display: inline-block;
+  padding: 0.6rem 1.75rem;
+  font-weight: 700;
+  background-color: #2073E5 !important;
+  border-color: #2073E5 !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+
+.streaming-hero__cta:hover {
+  background-color: #1a62c7 !important;
+  border-color: #1a62c7 !important;
+  color: #fff !important;
+}
+
+@media (min-width: 992px) {
+  .streaming-hero__visual {
+    aspect-ratio: 2.4 / 1;
+    min-height: 800px;
+  }
+  .streaming-hero__label {
+    bottom: 22%;
+    right: 18%;
+  }
+  .streaming-hero__content-block {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .streaming-hero__content-block .container {
+    padding-right: 7rem;
+  }
+}
+
+/* ---------- Secciones ---------- */
+.streaming-section {
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(32, 115, 229, 0.25);
+}
+
+.streaming-section--alt {
+  background-color: rgba(32, 115, 229, 0.06);
+}
+
+.streaming-section__head {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.streaming-section__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.streaming-section__badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.streaming-section__badge i {
+  margin-right: 0.35rem;
+  font-size: 1.25rem;
+  color: var(--post-accent);
+  filter: drop-shadow(0 0 6px rgba(32, 115, 229, 0.5));
+}
+
+/* ---------- Post-block 3 columnas (Radio, EUTV) ---------- */
+@media (min-width: 992px) {
+  .post-block__grid--three {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 4rem;
+  }
+}
+
+/* ---------- Grid formatos EUTV y Podcast (5 formatos: 3 + 2 en desktop) ---------- */
+.streaming-formats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 576px) {
+  .streaming-formats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .streaming-formats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .streaming-formats--five {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.streaming-format-card {
+  background-color: rgba(32, 115, 229, 0.08);
+  border: 1px solid rgba(32, 115, 229, 0.25);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.streaming-format-card__player {
+  aspect-ratio: 16 / 9;
+  background-color: #0a0f18;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(32, 115, 229, 0.35);
+}
+
+.streaming-format-card__player i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+/* Videoclip: la publicidad es el video mismo — sin zona blanca, solo reproductor */
+.streaming-format-card__player--videoclip {
+  /* Sin elemento adicional; el frame completo es el formato publicitario */
+}
+
+/* Cintillo: franja blanca abajo = formato publicitario */
+.streaming-format-card__ad-zone--bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 22%;
+  min-height: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 0;
+  display: block;
+}
+
+/* Logo esquina: cuadrado blanco arriba derecha = formato publicitario */
+.streaming-format-card__ad-zone--logo {
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  width: 20%;
+  max-width: 36px;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 2px;
+  z-index: 0;
+  display: block;
+}
+
+/* Takeover: borde blanco grueso alrededor = formato publicitario */
+.streaming-format-card__ad-zone--frame {
+  position: absolute;
+  inset: 0;
+  border: 20px solid rgba(255, 255, 255, 0.92);
+  border-radius: 6px;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
+
+/* Spot a doble cuadro: dos reproductores lado a lado (sin cajas blancas internas) */
+.streaming-format-card__player--doble-cuadro {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  border: none;
+  background-color: #fff;
+}
+
+.streaming-format-card__player--doble-cuadro .streaming-format-card__doble-cell {
+  flex: 1;
+  background-color: #0a0f18;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(32, 115, 229, 0.35);
+  min-height: 60%;
+}
+
+.streaming-format-card__player--doble-cuadro .streaming-format-card__doble-cell i {
+  font-size: 1.5rem;
+}
+
+.streaming-format-card__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.streaming-format-card .post-block__spec-text {
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.streaming-format-card .post-block__spec-text li {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.streaming-format-card .post-block__spec-text li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--post-accent);
+}
+
+/* ---------- Mockups TikTok Live ---------- */
+.streaming-mockup {
+  text-align: center;
+}
+
+.streaming-mockup__phone {
+  max-width: 220px;
+  margin: 0 auto 1rem;
+  border-radius: 24px;
+  padding: 10px;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.streaming-mockup__screen {
+  position: relative;
+  aspect-ratio: 9 / 19;
+  background-color: #111;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.streaming-mockup__live {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ff3b30;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.streaming-mockup__video {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.streaming-mockup__cintillo {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: rgba(32, 115, 229, 0.4);
+  z-index: 1;
+}
+
+.streaming-mockup__comments {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+.streaming-mockup__label {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.streaming-mockup .post-block__spec-text {
+  text-align: left;
+}
+
+/* ---------- Footer ---------- */
+.streaming-footer {
+  background-color: var(--tarifario-bg-card);
+  border-top: 1px solid rgba(32, 115, 229, 0.3);
+}

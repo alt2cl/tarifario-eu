@@ -1,0 +1,951 @@
+/* ========== Tarifario — Grupo Emisoras Unidas Digital ========== */
+:root {
+  --tarifario-bg: #0f1136;
+  --tarifario-bg-card: #0d1f36;
+  --tarifario-bg-content: #0d1321;
+  --tarifario-border: #2d7dd2;
+  --tarifario-accent: #f59e0b;
+  --tarifario-accent-pink: #ec4899;
+  --tarifario-text: #f0f4f8;
+  --tarifario-text-muted: #94a3b8;
+  --tarifario-font-title: 'Space Grotesk', sans-serif;
+  --tarifario-font-body: 'Roboto', sans-serif;
+  --post-accent: #2073E5;
+}
+
+/* ---------- Estilos transversales (compartidos: index.html, web.html, etc.) ----------
+   Reutilizables:
+   - .content-block-dark: bloque con fondo navy (--tarifario-bg-content)
+   - .section-title-hero: título grande blanco con tipografía título
+   - .section-title-hero__line: línea corta horizontal (ej. delante de "y DSP")
+   - .two-col-text: grid 2 columnas en desktop para párrafos
+   - .two-col-text p / .two-col-text strong: texto y negrita
+   - .content-divider: línea horizontal fina al final de un bloque
+   - .section-badge / .section-badge__icon: badge esquina (texto + icono circular)
+   - .overlay-label: etiqueta superpuesta sobre imagen (fondo gris, texto blanco)
+   - Variable --tarifario-bg-content: fondo azul oscuro para bloques de contenido
+*/
+.content-block-dark {
+  background-color: var(--tarifario-bg-content);
+  color: var(--tarifario-text);
+  padding: 2.5rem 0;
+}
+.section-title-hero {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+.section-title-hero__line {
+  display: inline-block;
+  width: 2rem;
+  height: 2px;
+  background-color: #fff;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}
+.two-col-text {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .two-col-text {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+.two-col-text p {
+  font-family: var(--tarifario-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+.two-col-text strong {
+  font-weight: 700;
+  color: #fff;
+}
+.content-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 2rem 0 0 0;
+  border: 0;
+}
+.section-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #fff;
+}
+.section-badge__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(45, 125, 210, 0.6) 0%, rgba(45, 125, 210, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.1;
+}
+.overlay-label {
+  position: absolute;
+  background-color: rgba(40, 40, 50, 0.85);
+  color: #fff;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--tarifario-font-body);
+  font-weight: 400;
+  color: var(--tarifario-text);
+  background-color: var(--tarifario-bg);
+  /* Ruta relativa al CSS: tarifario/styles.css → imagen en tarifario/src/img/bg-home.webp */
+  
+  background-attachment: scroll;
+  min-height: 100vh;
+}
+
+
+
+main.bg-home {
+  background-image: url('./src/img/bg-home.webp');
+  background-size: 670px;
+  background-position: center -30px;
+  background-repeat: no-repeat;
+  background-color: var(--tarifario-bg) ; 
+  overflow-x: hidden;
+}
+@media (min-width: 992px) {
+  main.bg-home {
+    background-size: 100%;
+    background-position: center -100px;
+  }
+
+}
+
+.tarifario-header__logo.logo-1 {
+  width: 120px;
+  height: 40px;
+}
+
+.tarifario-header__logo.logo-2 {
+  width: 120px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  main {
+    background-size: 800px;
+    background-position: center -30px;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    background-size: 1200px;
+    background-position: top center;
+  }
+  .tarifario-header__logo.logo-1 {
+    width: 220px;
+    height: 70px;
+  }
+  
+  .tarifario-header__logo.logo-2 {
+    width: 220px;
+    height: 70px;
+  }
+}
+
+
+
+/* ---------- Header (sticky) ---------- */
+.tarifario-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--tarifario-bg);
+  box-shadow: 0 1px 0 rgba(45, 125, 210, 0.2);
+}
+
+.tarifario-header .container > div {
+  position: relative;
+}
+
+.tarifario-header__logo {
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.tarifario-header__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--tarifario-text);
+}
+
+/* ---------- Menú hamburguesa y desplegable ---------- */
+.tarifario-nav__toggle {
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid var(--tarifario-border);
+  border-radius: 8px;
+  color: var(--tarifario-border);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tarifario-nav__toggle:hover {
+  background-color: rgba(45, 125, 210, 0.15);
+  color: var(--tarifario-text);
+}
+
+.tarifario-nav__icon {
+  font-size: 1.5rem;
+}
+
+.tarifario-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  min-width: 220px;
+  padding: 1rem 1.25rem;
+  background-color: var(--tarifario-bg);
+  border: 2px solid var(--tarifario-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1000;
+}
+
+.tarifario-nav--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.tarifario-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tarifario-nav__link {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  color: var(--tarifario-text);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tarifario-nav__link:hover {
+  background-color: rgba(45, 125, 210, 0.2);
+  color: var(--tarifario-text);
+}
+
+.tarifario-nav__link--active {
+  background-color: rgba(45, 125, 210, 0.35);
+  color: #7dd3fc;
+}
+
+@media (min-width: 576px) {
+  .tarifario-header__title { font-size: 1.75rem; }
+}
+
+/* ---------- Hero ---------- */
+.tarifario-hero {
+  position: relative;
+  min-height: 350px;
+  /* Sin fondo sólido para que se vea bg-home.webp del body */
+  background-color: transparent;
+}
+
+@media (min-width: 992px) {
+  .tarifario-hero {
+    min-height: 630px;
+    /* Sin fondo sólido para que se vea bg-home.webp del body */
+  }
+}
+
+.tarifario-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: top;
+}
+
+.tarifario-hero__overlay {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(20, 15, 67, 0) 0%, rgba(10, 22, 40, 0.85) 100%);
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .tarifario-hero { min-height: 380px; }
+}
+
+@media (min-width: 992px) {
+  .tarifario-hero { min-height: 630px; }
+}
+
+/* ---------- Secciones ---------- */
+.tarifario-section {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.tarifario-section--dark {
+  /* Semi-transparente para que se vea el fondo bg-home.webp del body */
+  background-color: rgba(10, 22, 40, 0.72);
+}
+
+.tarifario-section__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: var(--tarifario-text);
+  text-transform: uppercase;
+}
+
+.tarifario-section__title--light {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tarifario-section__logo {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .tarifario-section__title { font-size: 1.5rem; }
+}
+
+.img-personajes {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/* ---------- Cajas de estadísticas ---------- */
+.stat-box {
+  padding: 1.25rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid var(--tarifario-border);
+  border-radius: 12px;
+  height: 100%;
+  text-align: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.stat-box:hover {
+  box-shadow: 0px -12px 13px -7px rgba(45, 125, 210, 0.25);
+  transform: translateY(-2px);
+}
+
+.stat-box__number {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--tarifario-accent);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.stat-box__desc {
+  font-size: 0.875rem;
+  color: var(--tarifario-text-muted);
+  line-height: 1.4;
+}
+
+/* Primer bloque "PRIMER GRUPO MULTIMEDIOS": bordes difuminados abajo + font sizes del diseño */
+.tarifario-section--stats-primer .tarifario-section__title--stats {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.tarifario-section--stats-primer .stat-box--primer {
+  padding: 1.5rem 1.75rem 2.5rem;
+  background: none;
+  border: 1px solid var(--tarifario-border);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  text-align: center;
+  overflow: visible;
+}
+
+/* Gradiente superpuesto al borde: ::before = borde superior, ::after = borde izquierdo */
+.tarifario-section--stats-primer .stat-box--primer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  width: 1px;
+  height: 60%;
+  background: linear-gradient(180deg, var(--tarifario-border) 0%, #0c1322 60%, #000000 100%);
+  z-index: 0;
+}
+
+.tarifario-section--stats-primer .stat-box--primer::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  bottom: 0;
+  width: 1px;
+  height: 60%;
+  background: linear-gradient(180deg, var(--tarifario-border) 0%, #0c1322 60%, #000000 100%);
+  z-index: 0;
+}
+
+/* Texto pequeño celeste de fuentes (debajo de las cards) */
+.stat-block__sources {
+  font-size: 0.7rem;
+  color: #67b8e3;
+  line-height: 1.4;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .stat-block__sources { font-size: 0.75rem; }
+}
+
+.tarifario-section--stats-primer .stat-box--primer .stat-box__number {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 0.15rem;
+  line-height: 1;
+}
+
+.tarifario-section--stats-primer .stat-box--primer .stat-box__suffix {
+  display: block;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.tarifario-section--stats-primer .stat-box--primer .stat-box__desc {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+}
+
+@media (min-width: 576px) {
+  .stat-box__number { font-size: 1.75rem; }
+}
+
+@media (min-width: 768px) {
+  .tarifario-section--stats-primer .tarifario-section__title--stats { font-size: 1.75rem; }
+  .tarifario-section--stats-primer .stat-box--primer .stat-box__number { font-size: 3.5rem; }
+  .tarifario-section--stats-primer .stat-box--primer .stat-box__suffix { font-size: 1.25rem; }
+  .tarifario-section--stats-primer .stat-box--primer .stat-box__desc { font-size: 0.85rem; }
+}
+
+/* ---------- Audiencia ---------- */
+.tarifario-subtitle {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  color: var(--tarifario-border);
+  text-transform: uppercase;
+}
+
+.tarifario-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--tarifario-text-muted);
+}
+
+.tarifario-list li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(45, 125, 210, 0.2);
+}
+
+.tarifario-list li:last-child { border-bottom: none; }
+
+.audience-visual {
+  min-height: 200px;
+}
+
+.audience-visual__badge {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(10, 22, 40, 0.7);
+  border-radius: 8px;
+}
+
+.audience-visual__badge--left { left: 1rem; }
+.audience-visual__badge--right { right: 1rem; }
+
+/* Solo position absolute desde 992px; en mobile fluye en el documento */
+.position-absolute-from-lg {
+  position: static;
+}
+@media (min-width: 992px) {
+  .position-absolute-from-lg {
+    position: absolute;
+  }
+}
+
+/* Contenedor 42% / 58%: borde celeste como los titulares EDADES / TOP 3 */
+.audience-percentages-row {
+  border-color: #7dd3fc !important;
+}
+
+.audience-percentages-row .display-1 {
+  color: #fff;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+}
+
+/* Bloque EDADES / TOP 3 DE PAÍSES: colores y tamaños según diseño */
+.audience-data-block .audience-block-title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.audience-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.audience-list li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(45, 125, 210, 0.15);
+}
+
+.audience-list li:last-child { border-bottom: none; }
+
+.audience-list__label {
+  color: #7dd3fc;
+  font-family: var(--tarifario-font-body);
+  font-weight: 500;
+}
+
+.audience-list__value {
+  color: #fff;
+  font-family: var(--tarifario-font-body);
+  font-weight: 500;
+}
+
+.audience-permanencia {
+  font-size: 0.85rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ffd700;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.audience-fuente {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 768px) {
+  .audience-data-block .audience-block-title { font-size: 1.5rem; }
+  .audience-list { font-size: 1.3rem; }
+  .audience-permanencia { font-size: 0.9rem; margin-top: 1rem; display: inline-block; }
+  .audience-fuente { font-size: 0.7rem; }
+}
+
+/* ---------- Ecosistema ---------- */
+.ecosystem-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 1.5rem 1rem 1.25rem;
+  background-color: transparent;
+  height: 100%;
+  min-height: 160px;
+  text-align: center;
+}
+
+/* Enlace que envuelve toda la tarjeta (Web, Streaming) */
+a.ecosystem-item--link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 12px;
+}
+a.ecosystem-item--link:hover {
+  color: inherit;
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+a.ecosystem-item--link:focus {
+  color: inherit;
+  outline: 2px solid var(--tarifario-border);
+  outline-offset: 2px;
+}
+
+/* Número: esquina superior izquierda, blanco, grande */
+.ecosystem-item__num {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.ecosystem-item__icon {
+  font-size: 2.25rem;
+  color: var(--tarifario-border);
+}
+
+/* Contenedor del icono Web con destello (burbujas azul y amarilla) */
+.ecosystem-item__icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+}
+
+.ecosystem-item__icon-img {
+  
+  position: relative;
+  z-index: 1;
+}
+
+.ecosystem-item__icon-wrap .ecosystem-item__icon {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+
+
+.ecosystem-item__label {
+  font-family: var(--tarifario-font-title);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* Texto de baja: solo en cards 1 y 2, azul claro suave */
+.ecosystem-item__desc {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #7dd3fc;
+  line-height: 1.35;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ecosystem-item__num { font-size: 2.5rem; top: 1.25rem; left: 1.25rem; }
+  .ecosystem-item__icon { font-size: 2.5rem; }
+  .ecosystem-item__label { font-size: 1rem; }
+  .ecosystem-item__desc { font-size: 0.85rem; }
+}
+
+/* ---------- Redes sociales (visual full width) ---------- */
+.tarifario-section--social {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 240px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tarifario-social-bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--social-bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tarifario-social-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(180deg, rgba(245, 158, 11, 0.2) 0%, rgba(10, 22, 40, 0.5) 60%, rgba(10, 22, 40, 0.75) 100%); */
+}
+
+/* Título al bottom con apariencia cristal: opacidad + difuminado sobre la imagen */
+.tarifario-social-title-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem 1.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* Botón REDES SOCIALES: look metálico dorado-bronce, tipo píldora */
+.tarifario-social-title {
+  margin: 0;
+  padding: 0.85rem 2.25rem;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+  /* Degradado metálico: centro más claro (dorado), bordes superior/inferior más oscuros (bronce) */
+  background: linear-gradient(
+    180deg,
+    #6b5220 0%,
+    #8f7028 18%,
+    #c9a227 40%,
+    #e8d48a 50%,
+    #c9a227 60%,
+    #8f7028 82%,
+    #6b5220 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .tarifario-section--social { min-height: 600px; }
+  .tarifario-social-title { font-size: 1.6rem; padding: 1rem 2.5rem; }
+}
+
+/* ---------- Post (diseño referencia: título grande, 2 columnas, NOTA e Importante en azul) ---------- */
+.post-block {
+  --post-accent: #2073E5;
+}
+
+.post-block__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: #fff;
+  margin: 0 0 2rem 0;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.post-block__grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .post-block__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
+}
+
+.post-block__header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.post-block__header {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media (min-width: 576px) {
+  .post-block__header { font-size: 1.1rem; }
+}
+
+.post-block__header--right {
+  text-align: right;
+}
+
+.post-block__line {
+  height: 1px;
+  background-color: var(--post-accent);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.post-block__subtitle {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 0 0 0;
+}
+
+@media (min-width: 576px) {
+  .post-block__subtitle { font-size: 1.1rem; }
+}
+
+.post-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.post-block__list--prices li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 0;
+}
+
+.post-block__list--prices li.post-block__list-item--note {
+  display: block;
+  padding-left: 1.25rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.25rem;
+}
+
+.post-block__list--bullets li {
+  padding-left: 1.25rem;
+  position: relative;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.post-block__list--bullets li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #fff;
+}
+
+.post-block__list--numbered {
+  padding-left: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--post-accent);
+  margin-top: 0.5rem;
+}
+
+.post-block__list--numbered li {
+  margin-bottom: 0.35rem;
+}
+
+.post-block__nota {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--post-accent);
+  margin: 0.5rem 0 0 0;
+  line-height: 1.4;
+}
+
+@media (min-width: 576px) {
+  .post-block__nota { font-size: 0.8rem; }
+}
+
+.post-block__importante {
+  margin-top: 1.5rem;
+}
+
+.post-block__importante .post-block__line {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.post-block__importante-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--post-accent);
+  margin: 0 0 0.25rem 0;
+}
+
+@media (min-width: 576px) {
+  .post-block__importante-title { font-size: 0.8rem; }
+}
+
+.post-block__spec-text {
+  font-size: 0.95rem;
+  color: var(--tarifario-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Footer ---------- */
+.tarifario-footer {
+  background-color: var(--tarifario-bg-card);
+  border-top: 1px solid rgba(45, 125, 210, 0.3);
+}
