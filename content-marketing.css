@@ -3,7 +3,7 @@
 
 /* ---------- Layout página ---------- */
 .page-content-marketing {
-  background-color: var(--tarifario-bg-content);
+  /* background-color: var(--tarifario-bg-content); */
   color: var(--tarifario-text);
   overflow-x: hidden;
 }

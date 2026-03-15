@@ -2,7 +2,7 @@
 /* Misma base que tarifario (Bootstrap, fuentes, AOS). Tema: fondo azul oscuro, texto blanco, acento celeste. */
 
 .page-web {
-  background-color: var(--tarifario-bg-content);
+  /* background-color: var(--tarifario-bg-content); */
   color: var(--tarifario-text);
   overflow-x: hidden;
 }

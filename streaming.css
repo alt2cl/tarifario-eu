@@ -2,7 +2,7 @@
 /* Reutiliza: content-block-dark, section-title-hero, overlay-label, post-block (styles.css), section-badge (styles.css). */
 
 .page-streaming {
-  background-color: var(--tarifario-bg-content);
+  /* background-color: var(--tarifario-bg-content); */
   color: var(--tarifario-text);
   overflow-x: hidden;
 }
