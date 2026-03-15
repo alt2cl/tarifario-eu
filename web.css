@@ -138,30 +138,19 @@
   }
 }
 
-/* ---------- Secciones genéricas ---------- */
-.web-section {
-  padding: 2.5rem 0;
-  border-top: 1px solid rgba(32, 115, 229, 0.25);
-}
-.web-section--alt {
-  background-color: rgba(32, 115, 229, 0.06);
-}
-.web-section__head {
-  position: relative;
+/* ---------- Particularidades de sección (transversal en styles.css) ---------- */
+.page-web .content-section__head {
   margin-bottom: 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.web-section__title {
-  font-family: var(--tarifario-font-title);
-  font-weight: 700;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+.page-web .content-section__title {
   color: #fff;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
 }
+.page-web .content-section__badge-img {
+  width: 150px;
+  height: 150px;
+}
+
+/* ---------- Elementos propios de web (logo e intro en cabeza de sección) ---------- */
 .web-section__logo {
   position: absolute;
   top: 50%;

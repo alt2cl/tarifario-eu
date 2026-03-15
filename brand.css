@@ -148,50 +148,9 @@
   }
 }
 
-/* ---------- Sección precios y especificaciones ---------- */
-.brand-section {
-  padding: 2.5rem 0;
-  border-top: 1px solid rgba(32, 115, 229, 0.25);
-}
-
-.brand-section--alt {
-  background-color: rgba(32, 115, 229, 0.06);
-}
-
-.brand-section__head {
-  position: relative;
-  margin-bottom: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.brand-section__title {
-  font-family: var(--tarifario-font-title);
-  font-weight: 700;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--tarifario-text);
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.brand-section__badge {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--tarifario-font-title);
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: var(--tarifario-text);
-}
-
-.brand-section__badge-img {
-  margin-right: 0.35rem;
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+/* ---------- Sección precios (head/title/badge transversales en styles.css) ---------- */
+/* Particularidad: sombra en badge de esta página */
+.page-brand .content-section__badge-img {
   filter: drop-shadow(0 0 6px rgba(32, 115, 229, 0.5));
 }
 

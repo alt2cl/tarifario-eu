@@ -10,3 +10,13 @@
   margin-bottom: 1rem;
   line-height: 1.3;
 }
+
+/* ---------- Bloque Influencers: título con acento en "Influencers" ---------- */
+.page-produccion-audiovisual .content-section__title-accent {
+  display: inline-block;
+  font-size: 1.15em;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #fff;
+}

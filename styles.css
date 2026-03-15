@@ -789,6 +789,156 @@ a.ecosystem-item--link:focus {
   .tarifario-social-title { font-size: 1.6rem; padding: 1rem 2.5rem; }
 }
 
+/* ---------- Content section (transversal: bloque sección + variante --alt en subpáginas) ---------- */
+.content-section {
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(32, 115, 229, 0.25);
+}
+
+.content-section--alt {
+  background-color: rgba(32, 115, 229, 0.06);
+}
+
+/* ---------- Subpáginas con hero (Push, Producción Audiovisual): estructura compartida ---------- */
+.page-subpage .app-wrapper {
+  padding-bottom: 0;
+  min-height: 100vh;
+}
+.page-subpage main {
+  min-height: 0;
+}
+.subpage-header .container > div {
+  flex-wrap: wrap;
+}
+.header-logo-subpage {
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+}
+.hero-section {
+  margin-bottom: 0;
+}
+.hero-section .hero-content-block [data-aos],
+.hero-section .hero-content-block [data-aos].aos-init {
+  opacity: 1 !important;
+}
+.hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.78 / 1;
+  min-height: 220px;
+  overflow: hidden;
+  background-color: var(--tarifario-bg-content);
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-content-block {
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+.hero-content-block--narrow {
+  max-width: 100%;
+}
+.hero-badge-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.hero-title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+.hero-title-line2 {
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+.hero-line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin: 1rem 0;
+  border: 0;
+}
+.hero-bajada {
+  margin-top: 1.5rem;
+}
+.hero-bajada p {
+  margin: 0;
+  font-family: var(--tarifario-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--tarifario-text);
+}
+.hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--tarifario-text);
+}
+.hero-cta {
+  display: inline-block;
+  padding: 0.6rem 1.75rem;
+  font-weight: 700;
+  background-color: var(--post-accent) !important;
+  border-color: var(--post-accent) !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+.hero-scroll-icon {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.page-footer {
+  background-color: var(--tarifario-bg-content);
+  border-top: 1px solid rgba(32, 115, 229, 0.25);
+  color: var(--tarifario-text);
+}
+
+/* ---------- Content section head, title, badge (transversal) ---------- */
+.content-section__head {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.content-section__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--tarifario-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.content-section__badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--tarifario-text);
+}
+
+.content-section__badge-img {
+  margin-right: 0.35rem;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
 /* ---------- Post (diseño referencia: título grande, 2 columnas, NOTA e Importante en azul) ---------- */
 .post-block {
   --post-accent: #2073E5;
@@ -905,16 +1055,22 @@ a.ecosystem-item--link:focus {
   margin-bottom: 0.35rem;
 }
 
-.post-block__nota {
+/* ---------- Notas transversales (NOTA e Importante: mismo texto azul) ---------- */
+.post-block__nota,
+.post-block__importante-title {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--post-accent);
-  margin: 0.5rem 0 0 0;
   line-height: 1.4;
 }
 
+.post-block__nota {
+  margin: 0.5rem 0 0 0;
+}
+
 @media (min-width: 576px) {
-  .post-block__nota { font-size: 0.8rem; }
+  .post-block__nota,
+  .post-block__importante-title { font-size: 0.8rem; }
 }
 
 .post-block__importante {
@@ -927,14 +1083,7 @@ a.ecosystem-item--link:focus {
 }
 
 .post-block__importante-title {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--post-accent);
   margin: 0 0 0.25rem 0;
-}
-
-@media (min-width: 576px) {
-  .post-block__importante-title { font-size: 0.8rem; }
 }
 
 .post-block__spec-text {

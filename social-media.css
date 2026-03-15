@@ -1,5 +1,5 @@
 /* ========== Página Social Media (RRSS) ========== */
-/* Reutiliza: styles.css (post-block, section-badge, overlay-label). Estilos particulares de esta página. */
+/* Reutiliza: styles.css (post-block, content-section__head/title/badge, section-badge). Solo estilos particulares. */
 
 .page-social-media {
   color: var(--tarifario-text);
@@ -22,55 +22,114 @@
   display: block;
 }
 
-.social-media-section__head {
-  position: relative;
-  margin-bottom: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.social-media-section__title {
-  font-family: var(--tarifario-font-title);
-  font-weight: 700;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--tarifario-text);
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.social-media-section__badge {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--tarifario-font-title);
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: var(--tarifario-text);
-}
-
-.social-media-section__badge-img {
-  margin-right: 0.35rem;
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.social-media-section--alt {
-  background-color: rgba(32, 115, 229, 0.06);
+/* Particularidad: más padding en secciones --alt en esta página */
+.page-social-media .content-section--alt {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-.post-block__nota {
-  font-size: 0.875rem;
-  color: var(--tarifario-text-muted);
-}
+/* NOTA usa estilo transversal en styles.css (color var(--post-accent)) */
 
 @media (min-width: 992px) {
   .social-media-hero__visual {
     min-height: 320px;
   }
+}
+
+/* ---------- Medidas de materiales (3 columnas: Post, Historia, Reel/Tiktok) ---------- */
+.social-media-measures {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-media-measures--three {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .social-media-measures--three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .social-media-measures--three {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.social-media-measure-col {
+  background-color: rgba(32, 115, 229, 0.08);
+  border: 1px solid rgba(32, 115, 229, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.social-media-measure-col__screenshot {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  overflow: hidden;
+  background-color: var(--tarifario-bg-content);
+}
+
+.social-media-measure-col__screenshot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.social-media-measure-col__desc {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.social-media-measure-col__line {
+  height: 1px;
+  background-color: var(--post-accent);
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.social-media-measure-col__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--tarifario-text);
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.social-media-measure-col__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.25rem 0.5rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.social-media-measure-col__label {
+  font-weight: 700;
+  color: var(--tarifario-text-muted);
+  flex-shrink: 0;
+}
+
+.social-media-measure-col__value {
+  margin: 0;
+  color: var(--tarifario-text);
+  text-align: right;
+}
+
+.social-media-measure-col__row:only-child .social-media-measure-col__label,
+.social-media-measure-col__row p:only-child {
+  flex: 1;
+}
+
+.page-social-media .social-media-measure-col .post-block__nota {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
 }
