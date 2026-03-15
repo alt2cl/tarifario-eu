@@ -1,0 +1,76 @@
+/* ========== Página Social Media (RRSS) ========== */
+/* Reutiliza: styles.css (post-block, section-badge, overlay-label). Estilos particulares de esta página. */
+
+.page-social-media {
+  color: var(--tarifario-text);
+  overflow-x: hidden;
+}
+
+.social-media-hero__visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.78 / 1;
+  min-height: 220px;
+  overflow: hidden;
+  background-color: var(--tarifario-bg-content);
+}
+
+.social-media-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.social-media-section__head {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.social-media-section__title {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--tarifario-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.social-media-section__badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--tarifario-text);
+}
+
+.social-media-section__badge-img {
+  margin-right: 0.35rem;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.social-media-section--alt {
+  background-color: rgba(32, 115, 229, 0.06);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.post-block__nota {
+  font-size: 0.875rem;
+  color: var(--tarifario-text-muted);
+}
+
+@media (min-width: 992px) {
+  .social-media-hero__visual {
+    min-height: 320px;
+  }
+}

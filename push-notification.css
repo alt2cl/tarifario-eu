@@ -1,0 +1,18 @@
+/* ========== Página Push Notification ========== */
+/* Reutiliza: styles.css (page-subpage, subpage-header, hero-*, content-section*, content-pricing*, page-footer), post-block, section-badge. Solo estilos particulares de esta página. */
+
+/* ---------- Hero: particularidades ---------- */
+/* Columna izquierda de la bajada en celeste */
+.push-notification-hero__bajada-col-celeste p {
+  color: var(--post-accent);
+}
+
+/* Título mobile (color var(--tarifario-text); en otras páginas puede ser #fff) */
+.push-notification-hero__title-mobile {
+  font-family: var(--tarifario-font-title);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--tarifario-text);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}

@@ -52,7 +52,7 @@
 .web-hero__visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1.78 / 1;
   min-height: 220px;
   overflow: hidden;
 }
@@ -76,22 +76,6 @@
 .web-hero__content-block {
   padding-top: 2rem;
   padding-bottom: 2.5rem;
-}
-.web-hero__content-block .container {
-  position: relative;
-  padding-top: 0.25rem;
-}
-.web-hero__badge-desktop {
-  top: -0.5rem;
-}
-.web-hero__badge-img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-.web-hero__title {
-  margin-bottom: 1.5rem;
 }
 .web-hero__title-line-wrap {
   display: inline-block;
@@ -126,10 +110,23 @@
   color: #fff !important;
 }
 
+.web-hero__two-cols p {
+  font-family: var(--tarifario-font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.web-hero__two-cols strong {
+  font-weight: 700;
+  color: #fff;
+}
+
 @media (min-width: 992px) {
   .web-hero__visual {
-    aspect-ratio: 2.4 / 1;
-    min-height: 800px;
+    aspect-ratio: 1.78 / 1;
+    min-height: 320px;
   }
   .web-hero__label {
     bottom: 22%;
@@ -138,9 +135,6 @@
   .web-hero__content-block {
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-  .web-hero__content-block .container {
-    padding-right: 7rem;
   }
 }
 
