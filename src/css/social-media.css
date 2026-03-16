@@ -6,22 +6,6 @@
   overflow-x: hidden;
 }
 
-.social-media-hero__visual {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1.78 / 1;
-  min-height: 220px;
-  overflow: hidden;
-  background-color: var(--tarifario-bg-content);
-}
-
-.social-media-hero__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 /* Particularidad: más padding en secciones --alt en esta página */
 .page-social-media .content-section--alt {
   padding-top: 2rem;
@@ -29,12 +13,6 @@
 }
 
 /* NOTA usa estilo transversal en styles.css (color var(--post-accent)) */
-
-@media (min-width: 992px) {
-  .social-media-hero__visual {
-    min-height: 320px;
-  }
-}
 
 /* ---------- Medidas de materiales (3 columnas: Post, Historia, Reel/Tiktok) ---------- */
 .social-media-measures {

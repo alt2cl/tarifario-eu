@@ -20,8 +20,8 @@
       <div class="container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 py-3 position-relative">
           <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
-            <img src="./src/img/LP_EUD Home_07.png" alt="Grupo Emisoras Unidas Digital" class="tarifario-header__logo streaming-header__logo logo-1" width="220" height="70" />
-            <img src="./src/img/LP_EUD Home_03.png" alt="Grupo Emisoras Unidas Digital" class="tarifario-header__logo streaming-header__logo logo-2" width="220" height="70" />
+            <img src="./src/img/LP_EUD Home_07.png" alt="Grupo Emisoras Unidas Digital" class="tarifario-header__logo header-logo-subpage logo-1" width="220" height="70" />
+            <img src="./src/img/LP_EUD Home_03.png" alt="Grupo Emisoras Unidas Digital" class="tarifario-header__logo header-logo-subpage logo-2" width="220" height="70" />
           </a>
           <button type="button" class="tarifario-nav__toggle d-flex align-items-center justify-content-center" aria-label="Abrir menú" aria-expanded="false" aria-controls="tarifario-nav" id="tarifario-nav-toggle">
             <i class="bi bi-list tarifario-nav__icon" aria-hidden="true"></i>
@@ -46,18 +46,19 @@
     <main>
       <!-- ========== HERO — Imagen + overlay "Streaming" + título Radio en Línea ========== -->
       <section class="streaming-hero content-section--alt hero-section" aria-label="Introducción">
-        <div class="streaming-hero__visual">
-          <img src="./src/img/head-streaming.png" alt="" class="streaming-hero__img" width="1200" height="600" />
+        <div class="streaming-hero__visual hero-visual">
+          <img src="./src/img/head-streaming.png" alt="" class="streaming-hero__img hero-img" width="1200" height="600" />
         </div>
         <div class="streaming-hero__content-block hero-content-block hero-content-block--narrow">
-          <div class="container">
-            <div class="content-section__head">
-              <h1 class="content-section__title">Radio en Línea</h1>
-              <span class="content-section__badge" aria-hidden="true">
+          <div class="container position-relative">
+            <div class="hero-head-row d-none d-lg-flex">
+              <h1 class="section-title-hero hero-title mb-0" data-aos="fade-up">Radio en Línea</h1>
+              <div class="section-badge hero-badge-desktop" aria-hidden="true">
                 <span>Streaming</span>
-                <img src="./src/img/play.png" alt="" class="content-section__badge-img" width="150" height="150" />
-              </span>
+                <img src="./src/img/play.png" alt="" class="hero-badge-img" width="150" height="150" />
+              </div>
             </div>
+            <p class="hero-title-mobile d-lg-none">Radio en Línea</p>
             <div class="post-block__grid">
               <div class="post-block__col">
                 <div class="post-block__line"></div>
@@ -315,39 +316,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      AOS.init({ offset: 40, duration: 400, once: true });
-
-      var toggle = document.getElementById('tarifario-nav-toggle');
-      var nav = document.getElementById('tarifario-nav');
-      if (toggle && nav) {
-        function openMenu() {
-          nav.classList.add('tarifario-nav--open');
-          toggle.setAttribute('aria-expanded', 'true');
-          toggle.setAttribute('aria-label', 'Cerrar menú');
-          var icon = toggle.querySelector('.tarifario-nav__icon');
-          if (icon) { icon.classList.remove('bi-list'); icon.classList.add('bi-x'); }
-        }
-        function closeMenu() {
-          nav.classList.remove('tarifario-nav--open');
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.setAttribute('aria-label', 'Abrir menú');
-          var icon = toggle.querySelector('.tarifario-nav__icon');
-          if (icon) { icon.classList.add('bi-list'); icon.classList.remove('bi-x'); }
-        }
-        toggle.addEventListener('click', function () {
-          if (nav.classList.contains('tarifario-nav--open')) closeMenu();
-          else openMenu();
-        });
-        nav.querySelectorAll('.tarifario-nav__link').forEach(function (link) {
-          link.addEventListener('click', function () { closeMenu(); });
-        });
-        document.addEventListener('click', function (e) {
-          if (nav.classList.contains('tarifario-nav--open') && !nav.contains(e.target) && !toggle.contains(e.target)) closeMenu();
-        });
-      }
-    });
-  </script>
+  <script src="./src/js/scripts.js"></script>
 </body>
 </html>

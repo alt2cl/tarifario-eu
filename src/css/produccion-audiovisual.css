@@ -1,16 +1,6 @@
 /* ========== Página Producción Audiovisual ========== */
 /* Reutiliza: styles.css (page-subpage, subpage-header, hero-*, content-section*, content-pricing*, page-footer), post-block, section-badge. Solo estilos particulares de esta página. */
 
-/* ---------- Hero: particularidades ---------- */
-.produccion-audiovisual-hero__title-mobile {
-  font-family: var(--tarifario-font-title);
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--tarifario-text);
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
 /* ---------- Bloque Influencers: título con acento en "Influencers" ---------- */
 .page-produccion-audiovisual .content-section__title-accent {
   display: inline-block;

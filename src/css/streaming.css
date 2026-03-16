@@ -1,5 +1,5 @@
 /* ========== Página Streaming — Radio en Línea, EUTV, TikTok Live ========== */
-/* Reutiliza: content-block-dark, section-title-hero, overlay-label, post-block (styles.css), section-badge (styles.css). */
+/* Reutiliza: styles.css (page-subpage, subpage-header, header-logo-subpage, hero-section, hero-visual, hero-img, hero-content-block, hero-head-row, hero-title, hero-line, hero-title-mobile, content-section*, post-block, page-footer). Solo particularidades. */
 
 .page-streaming {
   /* background-color: var(--tarifario-bg-content); */
@@ -16,129 +16,16 @@
   min-height: 0;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header: reutiliza .subpage-header .container > div, .header-logo-subpage (styles.css) ---------- */
 .streaming-header .container > div {
   flex-wrap: wrap;
 }
-.streaming-header__logo {
-  height: auto;
-  max-height: 52px;
-  object-fit: contain;
-}
 
-/* ---------- Hero (imagen + overlay "Streaming" + bloque con título Radio en Línea) ---------- */
-.streaming-hero__visual {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  min-height: 220px;
-  overflow: hidden;
-  background-color: var(--tarifario-bg-content);
-}
-
-.streaming-hero__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.streaming-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(13, 19, 33, 0.2) 0%, rgba(13, 19, 33, 0.5) 100%);
-}
-
-.streaming-hero__label {
-  bottom: 18%;
-  right: 12%;
-  left: auto;
-  top: auto;
-}
-
-.streaming-hero__content-block {
-  padding-top: 2rem;
-  padding-bottom: 2.5rem;
-}
-
-.streaming-hero__content-block .container {
-  position: relative;
-  padding-top: 0.25rem;
-}
-
-.streaming-hero__badge-desktop {
-  top: -0.5rem;
-}
-
-.streaming-hero__badge-icon {
-  margin-left: 0.5rem;
-  font-size: 1.5rem;
-  color: var(--post-accent);
-  filter: drop-shadow(0 0 8px rgba(32, 115, 229, 0.6));
-}
-
-.streaming-hero__title {
-  margin-bottom: 1.5rem;
-}
-
-.streaming-hero__title-mobile {
-  font-family: var(--tarifario-font-title);
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.streaming-hero__desc {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.streaming-hero__cta {
-  display: inline-block;
-  padding: 0.6rem 1.75rem;
-  font-weight: 700;
-  background-color: #2073E5 !important;
-  border-color: #2073E5 !important;
-  color: #fff !important;
-  border-radius: 8px;
-}
-
-.streaming-hero__cta:hover {
-  background-color: #1a62c7 !important;
-  border-color: #1a62c7 !important;
-  color: #fff !important;
-}
-
+/* ---------- Hero: reutiliza .hero-visual, .hero-img, .hero-content-block, .hero-head-row (styles.css). Solo particularidades. ---------- */
 @media (min-width: 992px) {
-  .streaming-hero__visual {
-    aspect-ratio: 2.4 / 1;
-    min-height: 800px;
-  }
-  .streaming-hero__label {
-    bottom: 22%;
-    right: 18%;
-  }
-  .streaming-hero__content-block {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  .streaming-hero__content-block .container {
+  .streaming-hero .hero-content-block .container {
     padding-right: 7rem;
   }
-}
-
-/* ---------- Particularidades de sección (transversal en styles.css) ---------- */
-.page-streaming .content-section__title {
-  color: #fff;
-}
-
-.page-streaming .content-section__badge-img {
-  width: 150px;
-  height: 150px;
 }
 
 /* ---------- Post-block 3 columnas (Radio, EUTV) ---------- */
@@ -201,10 +88,6 @@
   z-index: 1;
 }
 
-/* Videoclip: la publicidad es el video mismo — sin zona blanca, solo reproductor */
-.streaming-format-card__player--videoclip {
-  /* Sin elemento adicional; el frame completo es el formato publicitario */
-}
 
 /* Cintillo: franja blanca abajo = formato publicitario */
 .streaming-format-card__ad-zone--bar {

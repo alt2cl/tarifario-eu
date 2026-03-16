@@ -138,18 +138,6 @@
   }
 }
 
-/* ---------- Particularidades de sección (transversal en styles.css) ---------- */
-.page-web .content-section__head {
-  margin-bottom: 1.25rem;
-}
-.page-web .content-section__title {
-  color: #fff;
-}
-.page-web .content-section__badge-img {
-  width: 150px;
-  height: 150px;
-}
-
 /* ---------- Elementos propios de web (logo e intro en cabeza de sección) ---------- */
 .web-section__logo {
   position: absolute;

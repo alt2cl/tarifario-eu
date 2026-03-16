@@ -1,7 +1,8 @@
 /**
  * Script transversal — Tarifario Grupo Emisoras Unidas Digital
- * Usado por: brand.html, push-notification.html, social-media.html, produccion-audiovisual.html
- * y cualquier subpágina que comparta el mismo header/menú y AOS.
+ * Usado por: web.html, streaming.html, brand.html, push-notification.html, social-media.html,
+ * produccion-audiovisual.html, content-marketing.html, influencers.html y cualquier subpágina
+ * que comparta el mismo header/menú y AOS.
  *
  * - Inicializa AOS (Animate On Scroll) para elementos con data-aos.
  * - Menú de navegación: abrir/cerrar, cambio de ícono (hamburguesa / X), cierre al clic en enlace o fuera.
