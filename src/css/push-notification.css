@@ -28,13 +28,6 @@
 }
 
 /* ---------- Hero: particularidades ---------- */
-.push-notification-hero {
-  margin-bottom: 0;
-}
-.push-notification-hero .push-notification-hero__content-block [data-aos],
-.push-notification-hero .push-notification-hero__content-block [data-aos].aos-init {
-  opacity: 1 !important;
-}
 .push-notification-hero__visual {
   position: relative;
   width: 100%;

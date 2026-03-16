@@ -27,15 +27,6 @@
 }
 
 /* ---------- Hero (imagen + overlay "Streaming" + bloque con título Radio en Línea) ---------- */
-.streaming-hero {
-  margin-bottom: 0;
-}
-
-.streaming-hero .streaming-hero__content-block [data-aos],
-.streaming-hero .streaming-hero__content-block [data-aos].aos-init {
-  opacity: 1 !important;
-}
-
 .streaming-hero__visual {
   position: relative;
   width: 100%;

@@ -1,18 +1,10 @@
 /* ========== Página Brand Day y Brand Weekend ========== */
-/* Reutiliza: section-title-hero, overlay-label, post-block (styles.css), section-badge (styles.css). Bajada en 2 columnas con Bootstrap row/col, no two-col-text. */
+/* Reutiliza: styles.css (page-subpage, subpage-header, hero-*, content-section*, post-block, section-badge, page-footer). Solo estilos particulares de esta página. */
 
+/* ---------- Layout página ---------- */
 .page-brand {
   color: var(--tarifario-text);
   overflow-x: hidden;
-}
-
-.page-brand .app-wrapper {
-  padding-bottom: 0;
-  min-height: 100vh;
-}
-
-.page-brand main {
-  min-height: 0;
 }
 
 /* ---------- Header ---------- */
@@ -25,60 +17,14 @@
   object-fit: contain;
 }
 
-/* ---------- Hero ---------- */
-.brand-hero {
-  margin-bottom: 0;
-}
-
-.brand-hero .brand-hero__content-block [data-aos],
-.brand-hero .brand-hero__content-block [data-aos].aos-init {
-  opacity: 1 !important;
-}
-
-.brand-hero__visual {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1.78 / 1;
-  min-height: 220px;
-  overflow: hidden;
-  background-color: var(--tarifario-bg-content);
-}
-
+/* ---------- Hero: particularidades ---------- */
 .brand-hero__img {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
-  display: block;
 }
-
-.brand-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(13, 19, 33, 0.2) 0%, rgba(13, 19, 33, 0.5) 100%);
-}
-
-.brand-hero__label {
-  bottom: 18%;
-  left: 50%;
-  transform: translateX(-50%);
-  right: auto;
-  top: auto;
-}
-
-.brand-hero__content-block {
-  padding-top: 2rem;
-  padding-bottom: 2.5rem;
-}
-
 .brand-hero__title-line2 {
   display: inline-block;
   margin-top: 0.4rem;
 }
-
-.brand-hero__bajada {
-  margin-top: 1.5rem;
-}
-
 .brand-hero__bajada p {
   margin: 0;
   font-family: var(--tarifario-font-body);
@@ -86,17 +32,10 @@
   line-height: 1.6;
   color: var(--tarifario-text);
 }
-
-.brand-hero__bajada strong {
-  font-weight: 700;
-  color: inherit;
-}
-
 .brand-hero__highlight {
   color: var(--post-accent);
   font-weight: 500;
 }
-
 .brand-hero__title-mobile {
   font-family: var(--tarifario-font-title);
   font-weight: 700;
@@ -105,55 +44,21 @@
   margin-bottom: 1rem;
   line-height: 1.3;
 }
-
 .brand-hero__desc {
-  color: rgba(255, 255, 255, 0.95);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.95);
 }
-
-.brand-hero__cta {
-  display: inline-block;
-  padding: 0.6rem 1.75rem;
-  font-weight: 700;
-  background-color: var(--post-accent) !important;
-  border-color: var(--post-accent) !important;
-  color: #fff !important;
-  border-radius: 8px;
-}
-
-.brand-hero__cta:hover {
-  background-color: #1a62c7 !important;
-  border-color: #1a62c7 !important;
-  color: #fff !important;
-}
-
 .brand-hero__scroll-icon {
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.7);
 }
 
-@media (min-width: 992px) {
-  .brand-hero__visual {
-    aspect-ratio: 1.78 / 1;
-    min-height: 320px;
-  }
-  .brand-hero__label {
-    bottom: 22%;
-  }
-  .brand-hero__content-block {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-
-/* ---------- Sección precios (head/title/badge transversales en styles.css) ---------- */
-/* Particularidad: sombra en badge de esta página */
+/* ---------- Sección precios: badge y títulos de bloque ---------- */
 .page-brand .content-section__badge-img {
   filter: drop-shadow(0 0 6px rgba(32, 115, 229, 0.5));
 }
-
 .brand-pricing__title {
   font-family: var(--tarifario-font-title);
   font-weight: 700;
@@ -161,15 +66,9 @@
   color: var(--tarifario-text);
   margin: 0 0 0.5rem 0;
 }
-
-.brand-pricing__cost-row {
-  margin-bottom: 0.25rem;
-}
-
 .brand-pricing__price {
   font-family: var(--tarifario-font-title);
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--tarifario-text);
 }
-

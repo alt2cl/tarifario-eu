@@ -28,13 +28,6 @@
 }
 
 /* ---------- Hero: particularidades ---------- */
-.influencers-hero {
-  margin-bottom: 0;
-}
-.influencers-hero .influencers-hero__content-block [data-aos],
-.influencers-hero .influencers-hero__content-block [data-aos].aos-init {
-  opacity: 1 !important;
-}
 .influencers-hero__visual {
   position: relative;
   width: 100%;

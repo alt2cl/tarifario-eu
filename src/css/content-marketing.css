@@ -28,13 +28,6 @@
 }
 
 /* ---------- Hero: particularidades ---------- */
-.content-marketing-hero {
-  margin-bottom: 0;
-}
-.content-marketing-hero .content-marketing-hero__content-block [data-aos],
-.content-marketing-hero .content-marketing-hero__content-block [data-aos].aos-init {
-  opacity: 1 !important;
-}
 .content-marketing-hero__visual {
   position: relative;
   width: 100%;
