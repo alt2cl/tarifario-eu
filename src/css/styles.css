@@ -13,6 +13,11 @@
   --post-accent: #2073E5;
 }
 
+.container {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
 /* ---------- Estilos transversales (compartidos: index.html, web.html, etc.) ----------
    Reutilizables:
    - .content-block-dark: bloque con fondo navy (--tarifario-bg-content)
@@ -135,7 +140,7 @@ body {
 
 
 main.bg-home {
-  background-image: url('./src/img/bg-home.webp');
+  background-image: url('../img/bg-home.webp');
   background-size: 670px;
   background-position: center -30px;
   background-repeat: no-repeat;
@@ -932,6 +937,10 @@ a.ecosystem-item--link:focus {
   color: var(--tarifario-text);
 }
 
+.content-section__badge span {
+  display: none;
+}
+
 .content-section__badge-img {
   margin-right: 0.35rem;
   width: 120px;
@@ -964,6 +973,10 @@ a.ecosystem-item--link:focus {
   .post-block__grid {
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
+  }
+
+  .content-section__badge span {
+    display: inline-block;
   }
 }
 
